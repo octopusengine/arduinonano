@@ -1,7 +1,6 @@
 /*
-2015/11 - ver 05
-ricardo@crcibernetica.com
-http://crcibernetica.com
+2015/11 - ver 05 - ricardo@crcibernetica.com http://crcibernetica.com
+2016 - nextion display
 */
 
 #include <SoftwareSerial.h>
