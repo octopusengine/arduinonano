@@ -1,6 +1,6 @@
 /*
 2015/11 - ver 05 - ricardo@crcibernetica.com http://crcibernetica.com
-2016 - nextion display
+2016 - nextion display -18/24
 */
 
 #include <SoftwareSerial.h>
@@ -20,7 +20,6 @@ void setup() {
   Serial.begin(9600);
   Serial.print("test-nextion");
   myNextion.init(); // send the initialization commands for Page 0
-
   //myNextion.setComponentText("t0", "Hello");
   nexTxt("t0", "3DWARF printer"); //ok moje
   delay(300);
@@ -52,8 +51,6 @@ void nexCom(const char* cmd){
     nextion.write(0xFF);
     nextion.write(0xFF); 
 }//end sendCommand 
-
-
 
 void loop() {
   cnt++;
@@ -91,7 +88,6 @@ void loop() {
     }
     }
     */
-  
   
   String message = myNextion.listen(); //check for message
   //if (message != "") {
@@ -134,10 +130,8 @@ void loop() {
     //serText = serText + "\"";
     Serial.println(serText);
     nexCom(serText.c_str());
-    
   }
   
   
   delay(200);
-
 }
